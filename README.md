@@ -1,4 +1,4 @@
-# project0
+project0
 CS50W project0
 For HarvardX Course
 Access with:

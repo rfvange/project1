@@ -26,55 +26,52 @@ text-align: right;
 </head>
   <body>
     <p>Hello, world!</p>
-    <img id="image_canv" src="IMG_3582.JPG" alt="ABC" style="transform:rotate(90deg)" width="400px";>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
-<p></p>
-<p></p>
-<p></p>
-<p></p>
-<p></p>
-<p></p>
-<p></p>
-<p></p>
-<p></p>
-<p></p>
-<p></p>
-<p></p>
-<p></p>
-<p></p>
-<p></p>
-<p></p>
-<p></p>
-<p></p>
-<p></p>
-<p></p>
-<p></p>
+    <img id="image_canv" src="IMG_3582.JPG" alt="ABC" style="transform:rotate(90deg)" width="400px">
+
+    <br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 	<table>
 	<tbody><tr>
-	  <td colspan="4"><input id="display" name="display" disabled=""></td>
+<!--	  <td colspan="4"><input id="display" name="display" disabled=""></td> -->
 	</tr>
 
 	<tr>
-	  <td><button id="button1" value="1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1</font></font></button></td>
-	  <td><button id="button2" value="2"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2</font></font></button></td>
-	  <td><button id="button3" value="3"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">3</font></font></button></td>
+	  <td><button id="button1" name="button1" value="1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1</font></font></button></td>
+	  <td><button id="button2" name="button2" value="2"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2</font></font></button></td>
+	  <td><button id="button3" name="button3" value="3"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">3</font></font></button></td>
 	  <td><button id="addButton"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">+</font></font></button></td>
 	</tr>
 	<tr>
-	  <td><button id="button4" value="4"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">4</font></font></button></td>
-	  <td><button id="button5" value="5"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">5</font></font></button></td>
-	  <td><button id="button6" value="6"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">6</font></font></button></td>
+	  <td><button id="button4" name="button4" value="4"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">4</font></font></button></td>
+	  <td><button id="button5" name="button5" value="5"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">5</font></font></button></td>
+	  <td><button id="button6" name="button6" value="6"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">6</font></font></button></td>
 	  <td><button id="subtractButton"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">-</font></font></button></td>
 	</tr>
 	<tr>
-	  <td><button id="button7" value="7"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">7</font></font></button></td>
-	  <td><button id="button8" value="8"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">8</font></font></button></td>
-	  <td><button id="button9" value="9"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">9</font></font></button></td>
+	  <td><button id="button7" name="button7" value="7"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">7</font></font></button></td>
+	  <td><button id="button8" name="button8" value="8"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">8</font></font></button></td>
+	  <td><button id="button9" name="button9" value="9"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">9</font></font></button></td>
 	  <td><button id="multiplyButton"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">*</font></font></button></td>
 	</tr>
 	<tr>
 	  <td><button id="clearButton"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">C</font></font></button></td>
-	  <td><button id="button0" value="0"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">0</font></font></button></td>
+	  <td><button id="button0" name="button0" value="0"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">0</font></font></button></td>
 	  <td><button id="equalsButton"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">=</font></font></button></td>
 	  <td><button id="divideButton"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">÷</font></font></button></td>
 	</tr>
@@ -84,13 +81,68 @@ text-align: right;
 	<span id="output"><!-- Use this span for writing debug messages or anything else you think will help! --></span>
 
 	<script src="./calc_files/calc.js.download"></script>
-<p></p>
-<p></p>
-<p></p>
-<p></p>
-<p></p>
-<p></p>
-<p></p>
 
+<script>
+//var button1Field = $("input[name='button1']");
+//var button1val = button1Field.val();
+//console.log('Here1: ' + $("button[name='button1']").value); // undefined?
+$("button[name='button1']").click(function() {
+  console.log('button1 pressed : val = ' + $("button[name='button1']").val());
+  var val1 = $("button[name='button1']").val();
+  var val2 = $("button[name='button2']").val(); // returns a string
+  val1 = parseInt(val1); // could also use "Number(val1)" - String -> Number
+  val2 = parseInt(val2);
+  console.log('val1 = ' + val1); // http://corelangs.com/js/string/parseint.html
+  console.log('val2 = ' + val2);
+  var total1 = val1 + val2; // the + catenates strings
+  console.log('total = ' + total1);
+});
+//console.log('Here2');
+
+$("button[name='button2']").click(function() {
+  console.log('button2 pressed : val = ' + $("button[name='button2']").val());
+});
+
+$("button[name='button3']").click(function() {
+  console.log('button3 pressed');
+});
+
+$("button[name='button4']").click(function() {
+  console.log('button4 pressed');
+});
+
+$("button[name='button5']").click(function() {
+  console.log('button5 pressed');
+});
+
+$("button[name='button6']").click(function() {
+  console.log('button6 pressed');
+});
+
+$("button[name='button7']").click(function() {
+  console.log('button7 pressed');
+});
+
+$("button[name='button8']").click(function() {
+  console.log('button8 pressed');
+});
+
+$("button[name='button9']").click(function() {
+  console.log('button9 pressed');
+});
+
+$("button[name='button0']").click(function() {
+  console.log('button0 pressed');
+});
+
+</script>
+
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
   </body>
 </html>

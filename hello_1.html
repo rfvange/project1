@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+<!--<meta charset="utf-8">-->
+  <head>
+  <meta charset="utf-64">
+    <title>My Webpage!</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<script type="text/javascript" src="./calc_files/1beac94c95"></script>
+<script src="./calc_files/nr-1071.min.js.download"></script>
+<script src="./calc_files/jquery.js.download"></script>
+
+<style>
+button {
+font-size: 200%;
+width: 40px;
+}
+
+input {
+font-size: 14px;
+height: 40px;
+text-align: right;
+}
+
+</style>
+<link type="text/css" rel="stylesheet" charset="UTF-8" href="./calc_files/translateelement.css">  
+</head>
+  <body>
+    <p>Hello, world!</p>
+<center>
+<p>This is my friend Jose.</p>
+</center>
+<br>
+<br>
+<br>
+<center>
+    <img id="image_canv" src="IMG_3582.JPG" alt="ABC" title="Jose, my friend." style="transform:rotate(90deg)" width="400px">
+</center>
+    <br>
+<br>
+<br>
+<br>
+<center>
+<p>Put your cursor on the above image and you'll see more information</p>
+</center>
+<br>
+<h1>h1tag: This is a web page that I'm using to learn web programming.</h1>
+<h2>h2tag: This is a web page that I'm using to learn web programming.</h2>
+<p>Normal: This is a web page that I'm using to learn web programming.</p>
+<em><p>Emphasis: This is a web page that I'm using to learn web programming.</p></em>
+<br>
+<p>This is a calculator that I'll program later.</p>
+<p>But I'll have to learn more about JavaScript and CSS before I can.</p>
+
+<input id="display" name="display" disabled="">
+
+	<table>
+	<tbody><tr>
+<!--	  <td colspan="4"><input id="display" name="display" disabled=""></td> -->
+	</tr>
+
+	<tr>
+	  <td><button id="button1" name="button1" value="1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1</font></font></button></td>
+	  <td><button id="button2" name="button2" value="2"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2</font></font></button></td>
+	  <td><button id="button3" name="button3" value="3"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">3</font></font></button></td>
+	  <td><button id="addButton"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">+</font></font></button></td>
+	</tr>
+	<tr>
+	  <td><button id="button4" name="button4" value="4"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">4</font></font></button></td>
+	  <td><button id="button5" name="button5" value="5"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">5</font></font></button></td>
+	  <td><button id="button6" name="button6" value="6"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">6</font></font></button></td>
+	  <td><button id="subtractButton"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">-</font></font></button></td>
+	</tr>
+	<tr>
+	  <td><button id="button7" name="button7" value="7"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">7</font></font></button></td>
+	  <td><button id="button8" name="button8" value="8"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">8</font></font></button></td>
+	  <td><button id="button9" name="button9" value="9"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">9</font></font></button></td>
+	  <td><button id="multiplyButton"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">*</font></font></button></td>
+	</tr>
+	<tr>
+	  <td><button id="clearButton"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">C</font></font></button></td>
+	  <td><button id="button0" name="button0" value="0"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">0</font></font></button></td>
+	  <td><button id="equalsButton"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">=</font></font></button></td>
+	  <td><button id="divideButton"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">÷</font></font></button></td>
+	</tr>
+
+	</tbody></table>
+
+	<span id="output"><!-- Use this span for writing debug messages or anything else you think will help! --></span>
+
+	<input id="display1" name="display1" disabled="">
+
+	<script src="./calc_files/calc.js.download"></script>
+
+<script>
+// See: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_display_checkbox_text
+//  var displayBox = document.getElementById("display");
+//  var text = document.getElementById("text");
+//  text.style.display = "block";
+  document.getElementById("display").value="Stay Tuned Folks";
+  document.getElementById("display1").value="Big things coming!";
+//  document.getElementById("output2").value={text.style.display = "block";};
+
+  </script>
+
+
+<script>
+//var button1Field = $("input[name='button1']");
+//var button1val = button1Field.val();
+//console.log('Here1: ' + $("button[name='button1']").value); // undefined?
+$("button[name='button1']").click(function() {
+  console.log('button1 pressed : val = ' + $("button[name='button1']").val());
+  var val1 = $("button[name='button1']").val();
+  var val2 = $("button[name='button2']").val(); // returns a string
+  val1 = parseInt(val1); // could also use "Number(val1)" - String -> Number
+  val2 = parseInt(val2);
+  console.log('val1 = ' + val1); // http://corelangs.com/js/string/parseint.html
+  console.log('val2 = ' + val2);
+  var total1 = val1 + val2; // the + catenates strings
+  console.log('total = ' + total1);
+});
+//console.log('Here2');
+
+$("button[name='button2']").click(function() {
+  console.log('button2 pressed : val = ' + $("button[name='button2']").val());
+});
+
+$("button[name='button3']").click(function() {
+  console.log('button3 pressed');
+});
+
+$("button[name='button4']").click(function() {
+  console.log('button4 pressed');
+});
+
+$("button[name='button5']").click(function() {
+  console.log('button5 pressed');
+});
+
+$("button[name='button6']").click(function() {
+  console.log('button6 pressed');
+});
+
+$("button[name='button7']").click(function() {
+  console.log('button7 pressed');
+});
+
+$("button[name='button8']").click(function() {
+  console.log('button8 pressed');
+});
+
+$("button[name='button9']").click(function() {
+  console.log('button9 pressed');
+});
+
+$("button[name='button0']").click(function() {
+  console.log('button0 pressed');
+});
+
+</script>
+
+<br>
+<br>
+<p>The following is invisible because it's a comment:</p>
+<!-- 
+
+HTML5 Semantic Category Tags
+============================
+- article
+- aside
+- details
+- main
+- section
+- summary
+- nav
+- header
+- footer
+
+-->
+<p>See!</p>
+<p>Now here's more HTML magic.</p>
+
+<style>
+p { margin: 20px;
+    font-size: 50px;
+	color: green;
+	font-size: 2rem;}
+
+</style>	
+<p>Hello Everyone!
+<br>
+<em>Hello Again!</em>
+<br>
+And Again!
+</p>
+<style>
+p { margin: 50px;
+    font-size: 100px;
+	color: black;
+}
+
+</style>	
+<!-- Get back to the above later -->
+<!-- It may change a global variable -->
+
+<p>Here's an itemized list that starts with 5</p>
+<ol id="cinema" class="attribute-list" start="5">
+<li>Item 1
+<li>Item 2
+</ol>
+<p>And another that starts with 6</p>
+<ol id="cinema" class="attribute-list" start="6">
+<li>Item 1
+<li>Item 2
+</ol>
+
+<style>
+p { margin-left: 0px;
+    font-size: 50px; }
+
+</style>	
+<p>===============</p>
+<style>
+p { margin-left: 5px;
+    font-size: 18px; }
+
+</style>
+<blockquote>
+<p>The following text is between two horizontal lines.</p>
+<hr>
+<p>Now let's go on to more demonstrations.
+<br>
+But first remember that the purpose of this web page is to help me learn, not to look
+pretty or logical.</p>
+<hr>
+</blockquote>
+<p>Here's a passage by a famous English writer:</p>
+    <h1>On the Inventor of Gunpowder.</h1>
+
+    <address rel="author">By John Milton</address>
+
+ <style>
+p {  font-size: 18px;
+ margin-left:   20px; 
+ margin-right:  10px;   
+ margin-top:    10px;   
+ margin-bottom: 10px; }
+</style>	
+   <p>Praise in old time the sage Prometheus won,<br>
+    Who stole ethereal radiance from the sun;<br>
+    But greater he, whose bold invention strove<br>
+    To emulate the fiery bolts of Jove.</p>
+
+<br>
+<br>
+
+<div>
+<table border="0px" cellpadding="5px" style="float: left;"><TR bgcolor="white" align="center"><TD colspan="2">
+<TD align="left" width="150" colspan="2"><div style="text-align:center; border-style:solid; border-width:thin; border-color:lightgrey ;line-height:1.5;"><BR>
+<p>This is text</p>
+</table>
+
+<table border="12px" cellpadding="5px" style="float: center;><TR bgcolor="red" align="center"><TD colspan="4">
+<TD align="center" width="150" colspan="2"><div style="text-align:center; border-style:solid; border-width:thin; border-color:lightgrey ;line-height:1.5;"><BR>
+<p>This is also text</p>
+</table>
+
+<table border="0px" cellpadding="5px" style="float: right;"><TR bgcolor="white" align="center"><TD colspan="2">
+<TD align="right" width="150" colspan="2"><div style="text-align:center; border-style:solid; border-width:thin; border-color:lightgrey ;line-height:1.5;"><BR>
+<p>This is also text to the right</p>
+</table>
+</div>
+
+<br>
+
+<div>
+<table border="0px" cellpadding="5px" style="float: left;"><TR bgcolor="white" align="center"><TD colspan="2">
+<tr>
+<TD align="left" width="150" colspan="2"><div style="text-align:center; border-style:solid; border-width:thin; border-color:lightgrey ;line-height:1.5;"><BR>
+<p>This is text</p>
+</td>
+</tr>
+</table>
+
+<table border="12px" cellpadding="5px" style="float: center;><TR bgcolor="red" align="center"><TD colspan="4">
+<tr>
+<TD align="center" width="150" colspan="2"><div style="text-align:center; border-style:solid; border-width:thin; border-color:lightgrey ;line-height:1.5;"><BR>
+<p>This is also text</p>
+</td>
+</tr>
+</table>
+
+<table border="0px" cellpadding="5px" style="float: right;"><TR bgcolor="white" align="center"><TD colspan="2">
+<tr>
+<TD align="right" width="150" colspan="2"><div style="text-align:center; border-style:solid; border-width:thin; border-color:lightgrey ;line-height:1.5;"><BR>
+<p>This is also text to the right</p>
+</td>
+</tr>
+</table>
+</div>
+
+<br>
+
+
+<h3>The following lines are part of an experiment that failed miserably, but I'll fix them someday.</h3>
+<p>These are special characters xxx &lt; yyy &quot; number &#8364; hex &#x20AC; euro &euro; x \20AC </p>
+<!--From: https://www.w3.org/International/questions/qa-escapes-->
+<p>Vive la France&#xA0;!</p>
+<p>Vive la France&#160;!</p>
+<p>Vive la France&nbsp;!</p>
+<p>\E9motion or 'émotion'</p>
+<p>zzz &quot;123&quot; zzz, xyz &gt   </p>
+<br>
+<p>That's all for now.</p>
+<p>Thanks for watching.</p>
+<p>More to come.</p>
+<br>
+<a href="./hello_2.html">Click here for my next page</a>
+<br>
+<br>
+<br>
+  </body>
+</html>
